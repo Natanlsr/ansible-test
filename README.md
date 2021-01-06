@@ -1,7 +1,7 @@
 # Steps
  - Build Image(inside dockerFile directory run this command):
  ```sh 
- docker build -t ubuntu_ansible_test .
+ $ docker build -t ubuntu_ansible_test .
  ```
  - Create Network: 
  ```sh 
@@ -13,16 +13,16 @@
  ``` 
 
 
--- Ansible
-* Generate keys to ssh: 
+### Ansible
+ - Generate keys to ssh: 
 ```sh 
 $ ssh-keygen
 ```
-* Copy public key to remote host: 
+ - Copy public key to remote host: 
 ```sh 
 $ ssh-copy-id -i /home/user/.ssh/id_rsa.pub root@192.168.15.100
 ```
-* Test if ssh is working: 
+ - Test if ssh is working: 
 ```sh 
 $ ssh -i /root/.ssh/id_rsa.pub test@192.168.15.100
 ```
