@@ -24,5 +24,5 @@ $ ssh-copy-id -i /home/user/.ssh/id_rsa.pub test@172.18.0.22
 ```
  - Test if ssh is working: 
 ```sh 
-$ ssh -i /root/.ssh/id_rsa.pub test@172.18.0.22
+$ ssh -i /home/user/.ssh/id_rsa.pub test@172.18.0.22
 ```
