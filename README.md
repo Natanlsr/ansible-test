@@ -20,9 +20,9 @@ $ ssh-keygen
 ```
  - Copy public key to remote host: 
 ```sh 
-$ ssh-copy-id -i /home/user/.ssh/id_rsa.pub root@192.168.15.100
+$ ssh-copy-id -i /home/user/.ssh/id_rsa.pub test@172.18.0.22
 ```
  - Test if ssh is working: 
 ```sh 
-$ ssh -i /root/.ssh/id_rsa.pub test@192.168.15.100
+$ ssh -i /root/.ssh/id_rsa.pub test@172.18.0.22
 ```
