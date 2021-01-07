@@ -6,6 +6,6 @@ RUN useradd -rm -d /home/ubuntu -s /bin/bash -g root -G sudo -u 1000 test
 
 RUN  echo 'test:test' | chpasswd
 
-COPY ssh_config /etc/ssh/ssh_config
+RUN su - test
 
 RUN service ssh start
