@@ -5,10 +5,9 @@ services:
     networks:
       mynet:
          ipv4_address: 172.18.0.22
-    command: 
-      - /usr/sbin/init
+    command: ["/usr/sbin/init","--privileged"]
     volumes:
-      - /sys/fs/cgroup
+      - /sys/fs/cgroup:/sys/fs/cgroup
     expose:
       - 22
   

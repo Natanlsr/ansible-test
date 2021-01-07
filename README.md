@@ -9,7 +9,7 @@
  ```
  - Run Image: 
  ```sh 
- $ docker run --net mynet123 --ip 172.18.0.22 -it cetos_ansible_test bash
+ $ docker run --net mynet123 --ip 172.18.0.22 -it ubuntu_ansible_test bash
  ``` 
 
  # Steps to DockerFile CentOS
@@ -26,6 +26,16 @@
  $ docker run --net mynet123 --ip 172.18.0.22 --privileged -ti -e container=docker -v /sys/fs/cgroup:/sys/fs/cgroup cetos_ansible_test /usr/sbin/init
  ``` 
 
+# To Run Using docker-compose:
+
+ - Ubuntu execute after created image:
+ ```sh 
+$ docker-compose run --rm ubuntu /bin/bash
+```
+ - CentOS execute after created image:
+ ```sh 
+$ docker-compose run --rm cent-os /usr/sbin/init
+```
 
 ### Ansible
  - Generate keys to ssh: 
