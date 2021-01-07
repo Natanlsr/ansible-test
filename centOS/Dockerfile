@@ -1,4 +1,5 @@
 FROM centos:7
+ENV container docker
 
 RUN yum -y install openssh-server openssh-clients epel-release sudo && \
     rm -f /etc/ssh/ssh_host_ecdsa_key /etc/ssh/ssh_host_ed25519_key /etc/ssh/ssh_host_dsa_key && \
