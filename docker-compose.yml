@@ -1,0 +1,31 @@
+version: "3.3"
+services:
+  cent-os:
+    image: cetos_ansible_test:latest
+    networks:
+      mynet:
+         ipv4_address: 172.18.0.22
+    command: 
+      - /usr/sbin/init
+    volumes:
+      - /sys/fs/cgroup
+    expose:
+      - 22
+  
+  ubuntu: 
+    image: ubuntu_ansible_test:latest
+    networks:
+      mynet:
+        ipv4_address: 172.18.0.23
+    command:
+      - bash
+    expose:
+      - 22
+
+networks:
+  mynet:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.18.0.0/20
